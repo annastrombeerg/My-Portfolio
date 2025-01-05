@@ -17,20 +17,48 @@ body {
 }
 
 /* Navbar Styling */
-#navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 5px;
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#navbar a:hover, #navbar a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+#navbar a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#navbar a.active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Home Page Header Styling */
+#home-header {
+    margin-top: 100px;
+}
+
 #home-header img#myPhoto {
     border-radius: 50%;
     width: 150px;
@@ -49,6 +77,10 @@ body {
 }
 
 /* About Page Styling */
+#about-header {
+    margin-top: 100px;
+}
+
 #about-header img#myPhoto {
     border-radius: 50%;
     width: 150px;
@@ -89,7 +121,42 @@ body {
     border-radius: 5px;
 }
 
+#contact .btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    border: 5px solid transparent;
+    background-color: #000;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#contact .btn::before { /* för att få gradiant, funkar inte just nu */
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #C11E1E, #00B5FF);
+    z-index: -1;
+}
+
+#contact .btn:hover::before {
+    filter: blur(8px);
+    opacity: 0.8;
+}
+
 /* Projects Page Styling */
+#project-header {
+    margin-top: 100px;
+}
+
 #projects .project-item {
     margin: 40px auto;
     max-width: 900px;
@@ -100,8 +167,9 @@ body {
 }
 
 .project-item img.project-img {
-    width: 100px;
+    width: 150px;
     height: 100px;
+    background-color: #fff;
     float: left;
     margin-right: 20px;
     border: 2px solid #fff;
@@ -109,6 +177,10 @@ body {
 }
 
 /* Contact Page Form Styling */
+#contact-header {
+    margin-top: 100px;
+}
+
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -174,9 +246,9 @@ footer img {
 /* Mobile */
 @media only screen and (max-width: 479px) {
     body {
-        justify-content: space-between;
-        height: auto;
-        min-height: 100vh;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
     }
 }
 
