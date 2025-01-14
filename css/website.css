@@ -16,6 +16,7 @@ body {
     justify-content: flex-start;
 }
 
+
 /* Navbar Styling */
 
 #navbar {
@@ -76,6 +77,46 @@ body {
     margin-bottom: 30px;
 }
 
+#contactHome .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #000;
+    border: 4px solid transparent;
+    background-image: linear-gradient(#000, #000),
+                      linear-gradient(90deg, #C11E1E, #00B5FF);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: all 0.3s ease;
+}
+
+#contactHome .btn:hover {
+    background-image: linear-gradient(#000, #000), linear-gradient(90deg, #C11E1E, #C11E1E);
+}
+
+#projectsHome .project-item {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.project-item img.project-img {
+    width: 150px;
+    height: 100px;
+    background-color: #fff;
+    float: left;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
 /* About Page Styling */
 #about-header {
     margin-top: 100px;
@@ -121,35 +162,49 @@ body {
     border-radius: 5px;
 }
 
-#contact .btn {
+#langList {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#langList li {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-image: linear-gradient(#000, #000),
+                      linear-gradient(90deg, #C11E1E, #00B5FF);
+    background-origin: border-box; 
+    background-clip: padding-box, border-box;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#contactAbout .btn {
     display: inline-block;
-    padding: 15px 40px;
-    font-size: 1.5rem;
+    padding: 20px 50px;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
     border-radius: 50px;
-    border: 5px solid transparent;
     background-color: #000;
-    position: relative;
+    border: 4px solid transparent;
+    background-image: linear-gradient(#000, #000),
+                      linear-gradient(90deg, #C11E1E, #00B5FF);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     transition: all 0.3s ease;
 }
 
-#contact .btn::before { /* för att få gradiant, funkar inte just nu */
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50px;
-    background: linear-gradient(90deg, #C11E1E, #00B5FF);
-    z-index: -1;
-}
-
-#contact .btn:hover::before {
-    filter: blur(8px);
-    opacity: 0.8;
+#contactAbout .btn:hover {
+    background-image: linear-gradient(#000, #000), linear-gradient(90deg, #C11E1E, #C11E1E);
 }
 
 /* Projects Page Styling */
