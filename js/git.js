@@ -12,7 +12,7 @@ Detta demonstrerar praktisk användning av AJAX (`XMLHttpRequest`) för att häm
 
 document.addEventListener('DOMContentLoaded', function () {
     const username = 'annastrombeerg';
-    const project = document.querySelector('#projects');
+    const project = document.querySelector('#projects') || document.querySelector('#projectsHome');    ;
 
     //Funktion för att hämta alla repositories från GitHub API
     function fetchGit() {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const projectLink = document.createElement('a');
         projectLink.href = link;
         projectLink.target = '_blank';
-        projectLink.textContent = 'Visa på GitHub';
+        projectLink.textContent = 'Go To GitHub';
 
         //Bygg strukturen
         container.appendChild(projectImage);
