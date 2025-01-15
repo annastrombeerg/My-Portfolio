@@ -62,8 +62,8 @@ body {
 
 #home-header img#myPhoto {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -75,6 +75,7 @@ body {
 #home-header p#title {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: rgb(143, 143, 143);
 }
 
 #contactHome .btn {
@@ -100,21 +101,26 @@ body {
 }
 
 #projectsHome {
-    margin-top: 30px;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 50px 20px;
-    text-align: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
 }
 
 #projectsHome .project-item {
-    height: 250px;
-    display: flex;
+    height: auto;
+    display: block;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.211);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    max-width: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -122,22 +128,25 @@ body {
     width: 100px;
     height: 100px;
     margin: 0 auto 15px;
-    object-fit: cover;
-    border: 2px solid #fff;
+    object-fit: contain;
+    border: 2px solid #000000;
     border-radius: 10px;
 }
 
-#projectsHome h2 {
-    grid-column: 1 / -1;
-    font-size: 2rem;
-    font-weight: bold;
+#projectHomeTitle {
     text-align: center;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 #projectsHome p {
     font-size: 0.85rem;
     margin-bottom: 10px;
+    margin-left: 10%;
+    text-align: left;
 }
 
 #projectsHome a {
@@ -152,6 +161,7 @@ body {
     font-size: 0.9rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #projectsHome a:hover {
@@ -183,11 +193,17 @@ body {
     margin-bottom: 20px;
 }
 
+#about-header p#title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color:  rgb(143, 143, 143);
+}
+
 #experience article {
     margin: 40px auto;
     max-width: 800px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.211);
     border-radius: 10px;
 }
 
@@ -258,7 +274,7 @@ body {
     margin: 40px auto;
     max-width: 900px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.211);
     border-radius: 10px;
     text-align: left;
 }
@@ -271,6 +287,25 @@ body {
     margin-right: 20px;
     border: 2px solid #fff;
     border-radius: 10px;
+}
+
+#projects a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00B5FF;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+#projects a:hover {
+    background-color: #C11E1E;
+    transform: translateY(-3px);
 }
 
 /* Contact Page Form Styling */
@@ -286,7 +321,7 @@ body {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.211);
     border-radius: 10px;
 }
 
