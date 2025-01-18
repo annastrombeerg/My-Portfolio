@@ -9,11 +9,39 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    color: #fff;
+    color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+/* Light Mode */
+body.lightMode {
+    background-color: rgb(225, 225, 225);
+    background-image: url('/My-Portfolio/images/BackgroundPattern.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+body.lightMode #project-header {
+    margin-top: 100px;
+    color: black;
+}
+
+body.lightMode #projects .project-item {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(120, 120, 120, 0.725);
+    border-radius: 10px;
+    text-align: left;
+}
+
+body.lightMode #projectFooter {
+    color: black;
 }
 
 
@@ -268,6 +296,19 @@ body {
 /* Projects Page Styling */
 #project-header {
     margin-top: 100px;
+}
+
+#modeSwitch {
+    background-color: #C11E1E;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#modeSwitch:hover {
+    background-color: #00B5FF;
 }
 
 #projects .project-item {
