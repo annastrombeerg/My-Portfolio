@@ -343,22 +343,16 @@ body {
     background-origin: border-box;
     background-clip: padding-box, border-box;
     border-radius: 10px;
-    box-shadow: 2px 8px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 textarea {
     resize: none;
 }
 
-
-#contact-form textarea {
-    height: 150px;
-    resize: none;
-}
 
 input[type="text"],
-input[type="email"],
-textarea {
+input[type="email"] {
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
@@ -379,6 +373,7 @@ textarea:focus {
 
 #subject {
     border-radius: 5px;
+    border: 2px solid black;
     color: black;
     font-size: 18px;
     font-weight: bold;
@@ -413,10 +408,10 @@ input[type="email"] {
 
 #message {
     background-image: url('/My-Portfolio/images/MessageTyping.png');
-    background-position: 10px center;
+    background-position: 5px top;
     background-repeat: no-repeat;
-    background-size: 25px 25px;
-    padding: 20px 250px;
+    background-size: 30px 30px;
+    padding: 15px 200px;
     padding-left: 40px;
     font-size: 18px;
     font-weight: bold;
@@ -430,6 +425,7 @@ input[type="email"] {
     background-size: 30px 30px;
     background-color: white;
     color: black;
+    border: 2px solid black;
     padding: 15px 20px;
     padding-left: 50px;
     font-size: 18px;
