@@ -42,7 +42,7 @@ form.addEventListener("submit", function(event) {
         if (request.readyState === 4 && request.status === 200) {
             //Visa resultatet från servern (bekräftelsemeddelande)
             formEndp.textContent = "Thank you, your message has been sent successfully! I will respond as fast as I can!";
-            //form.earse;
+            form.reset();
         } else if (request.readyState === 4 && request.status !== 200) {
             //Hantera fel
             formEndp.textContent = "Sorry, there was an issue sending your message.";
